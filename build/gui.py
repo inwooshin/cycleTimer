@@ -21,6 +21,7 @@ def relative_to_assets(path: str) -> Path:
 
 window = Tk()
 
+
 window.geometry("278x291")
 window.configure(bg = "#58B5E9")
 
@@ -38,14 +39,14 @@ canvas = Canvas(
 canvas.place(x = 0, y = 0)
 countDownImage = PhotoImage(
     file=relative_to_assets("button_1.png"))
-countDownBreak = Button(
+countDownButton = Button(
     image=countDownImage,
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_1 clicked"),
     relief="flat"
 )
-countDownBreak.place(
+countDownButton.place(
     x=51.0,
     y=214.0,
     width=53.0,
@@ -54,52 +55,54 @@ countDownBreak.place(
 
 countUpImage = PhotoImage(
     file=relative_to_assets("button_4.png"))
-countUpStudy = Button(
+countUpButton = Button(
     image=countUpImage,
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_4 clicked"),
     relief="flat"
 )
-countUpStudy.place(
+countUpButton.place(
     x=109.0,
     y=214.0,
     width=53.0,
     height=45.0
 )
 
+listImage = PhotoImage(
+    file=relative_to_assets("button_3.png"))
+listButton = Button(
+    image=listImage,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_3 clicked"),
+    relief="flat"
+)
+listButton.place(
+    x=167.0,
+    y=214.0,
+    width=53.0,
+    height=45.0
+)
 
-button_image_2 = PhotoImage(
+
+quitImage = PhotoImage(
     file=relative_to_assets("button_2.png"))
-button_2 = Button(
-    image=button_image_2,
+quitButton = Button(
+    image=quitImage,
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_2 clicked"),
     relief="flat"
 )
-button_2.place(
+quitButton.place(
     x=235.0,
     y=10.0,
     width=27.0,
     height=27.0
 )
 
-button_image_3 = PhotoImage(
-    file=relative_to_assets("button_3.png"))
-button_3 = Button(
-    image=button_image_3,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_3 clicked"),
-    relief="flat"
-)
-button_3.place(
-    x=167.0,
-    y=214.0,
-    width=53.0,
-    height=45.0
-)
+
 
 
 canvas.create_text(
